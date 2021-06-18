@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename = 'style.css') }}">
+    <title>Dojos</title>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="new_dojo">
+                <h1>New Dojo</h1>
+                <p>Name: <input type="text" name="name"></p>
+                <input type="submit">
+            </div>
+            <div class="all_dojos">
+                <h1> All Dojos</h1>
+                <table>
+                    <thead>
+                        <p>
+                            <p>Los Angeles</p>
+                            <p>Chicago</p>
+                            <p>San Jose</p>
+                            <p>Online</p>
+                            <p>Bellevue</p>
+                            <p>Boise</p>
+                            <p>Dallas</p>
+                        </tr>
+                    </thead>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

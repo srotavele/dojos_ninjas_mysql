@@ -1,0 +1,17 @@
+.container {
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-content: space-around;
+  margin: 25px;
+  padding: 25px;
+}
+
+.new_dojo {
+  margin-right: 50px;
+}
+
+.all_dojos {
+}
