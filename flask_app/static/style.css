@@ -14,4 +14,6 @@
 }
 
 .all_dojos {
+  border: solid;
+  padding: 10px;
 }

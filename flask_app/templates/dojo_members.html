@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dojo_Members
-    </title>
+    <title>Dojo_Members</title>
 </head>
 <body>
-    <h1>CITY_NINJAS</h1>
+    
+    <h1>Ninjas</h1>
+   
     <table>
         <thead>
             <tr>
@@ -17,7 +18,14 @@
                 <th> Age </th>
             </tr>
         </thead>
+        {% for student in all_ninjas: %}
+            <tr>
+                <tr>{{student.first_name}}</tr>
+                <tr>{{student.last_name}}</tr>
+                <tr>{student.age}}</tr>
+            </tr>
+        {% endfor %}
     </table>
+    <a href="dojos.html">Home</a>
 </body>
-
 </html>

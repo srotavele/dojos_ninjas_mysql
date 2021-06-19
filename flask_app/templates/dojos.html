@@ -11,26 +11,24 @@
     <div class="container">
         <div class="main">
             <div class="new_dojo">
-                <h1>New Dojo</h1>
-                <p>Name: <input type="text" name="name"></p>
-                <input type="submit">
+                <h1 style="color: maroon;">New Dojo</h1>
+                <form action="/create/dojo" method="post">
+                    <p>Name: <input type="text" name="name"></p>
+                    <input type="submit">
             </div>
+                </form>
             <div class="all_dojos">
                 <h1> All Dojos</h1>
                 <table>
                     <thead>
-                        <p>
-                            <p>Los Angeles</p>
-                            <p>Chicago</p>
-                            <p>San Jose</p>
-                            <p>Online</p>
-                            <p>Bellevue</p>
-                            <p>Boise</p>
-                            <p>Dallas</p>
+                        <tr>
+                        {% for locations in all_dojos: %}
+                        <p><a href="/show/dojo/{{locations.id}}">{{locations.name }}</a></p>
+                        {% endfor %}
                         </tr>
                     </thead>
                 </table>
-
+                <p><a href='create/homepage'> Add Ninja</a></p>
             </div>
         </div>
     </div>
