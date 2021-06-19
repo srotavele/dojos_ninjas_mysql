@@ -15,7 +15,7 @@ class Ninja:
     @classmethod
     def get_all(cls):
         query = "SELECT * FROM ninjas;"
-        results = connectToMySQL('dojos_ninjas').query_db(query)
+        results = connectToMySQL('dojo_ninja_v3').query_db(query)
         print(results)
         ninjas = []
         
@@ -26,7 +26,8 @@ class Ninja:
     
     @classmethod
     def create(cls,data):
-        query = "INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at ) VALUES (%(first_name)s,%(last_name)s, %(age)s, NOW(), NOW());"
+        query = "INSERT INTO ninjas (first_name, last_name, age, created_at, updated_at, dojos_id) VALUES (%(first_name)s,%(last_name)s, %(age)s, NOW(), NOW(), %(dojos_id)s);"
         
-        results = connectToMySQL('dojos_ninjas').query_db(query,data)
+        results = connectToMySQL('dojo_ninja_v3').query_db(query,data)
         return results
+    

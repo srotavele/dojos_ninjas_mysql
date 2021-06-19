@@ -22,9 +22,12 @@ def create_ninja():
     data = {
         'first_name': request.form['first_name'],
         'last_name': request.form['last_name'],
-        'age': request.form['age']
+        'age': request.form['age'],
+        'dojos_id': request.form['dojo_id']
     }
     Ninja.create(data)
 
-    return redirect('/')
+    return redirect(f"/show/dojo/{request.form ['dojo_id']}")
+
+
 

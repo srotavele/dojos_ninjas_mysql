@@ -12,7 +12,7 @@
     <h1>Add A New Ninja</h1>
     <form action="/create/ninja" method="post">
         <p>Dojo:
-            <select name="dojo.id">
+            <select name="dojo_id">
             {% for location in all_dojos: %}
                 <option value="{{ location.id }}">{{ location.name }}</option>
             {% endfor %}

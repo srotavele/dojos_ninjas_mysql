@@ -20,4 +20,4 @@ def creates_dojo():
 @app.route('/show/dojo/<int:dojo_id>')
 def dojo_show(dojo_id):
     this_dojo = Dojo.get_one( {'id':dojo_id})
-    return render_template('dojo_members.html')
+    return render_template('dojo_members.html', this_dojo = this_dojo)
